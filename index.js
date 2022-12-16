@@ -2,10 +2,35 @@
 
 
 const board = new Board();
-const player = new Player("Player1");
+//add monsters
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
 
-board.addPlayer(player);
-player.getHealth();
+
+//add items
+board.addItem("hp");
+board.addItem("str");
+board.addItem("hp");
+board.addItem("str");
+board.addItem("hp");
+
+//game loop
+board.gameLoop();
+
+
+
+
+
+
+
+
 
 
 
