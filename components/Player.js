@@ -1,5 +1,4 @@
-
- class Player {
+class Player {
     constructor() {
         this.hp = 100;
         this.name = "Jonny the brave";
@@ -48,21 +47,17 @@
         //if player is dead
         if (this.hp === 0) {
             console.log("You lost!");
-        }
-
-        else {
+        } else {
             console.log("You won the battle!");
         }
     }
-
 
 
     usePotion(name) {
         if (name === "hp") {
             this.hp += 10;
             console.log(`${this.name}'s health is now ${this.hp}!`);
-        }
-        else if (name === "str") {
+        } else if (name === "str") {
             this.str += 5;
             console.log(`${this.name}'s strength is now ${this.str}!`);
         }
