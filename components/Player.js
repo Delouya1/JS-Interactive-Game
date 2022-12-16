@@ -3,8 +3,7 @@
     constructor(name) {
         this.hp = 100;
         this.name = name;
-        this.strength = 10;
-        this.inventory = [];
+        this.str = 10;
         this.x = 0;
         this.y = 0;
 
@@ -20,35 +19,28 @@
     }
 
     isAlive() {
-        return this.health !== 0;
+        return this.hp !== 0;
     }
 
-    reduceHealth(health) {
-        this.health -= health;
-        if (this.health < 0) {
-            this.health = 0;
+    reduceHealth(hp) {
+        this.hp -= hp;
+        if (this.hp < 0) {
+            this.hp = 0;
         }
     }
 
     attack(opponent) {
         console.log(`${this.name} attacked ${opponent.name}!`);
-        opponent.reduceHealth(this.strength);
+        opponent.reduceHealth(this.str);
     }
 
-    addPotion(potion) {
-        this.inventory.push(potion);
-    }
 
-    usePotion(index) {
-        const potion = this.inventory.splice(index, 1)[0];
-        switch (potion.name) {
-            case 'STR':
-                this.strength += 5;
-                break;
-            case 'HP':
-                this.hp += 10;
-                break;
-        }
+
+    usePotion(name) {
+        //if the name is hp then add +10 hp, if the name is str then add +5 str:
+
+
+
     }
 
     getCordinates() {
@@ -57,6 +49,6 @@
 
 
     printStats() {
-        console.log(`Name: ${this.name}\nHealth: ${this.hp}\nStrength: ${this.strength}`);
+        console.log(`Name: ${this.name}\nHealth: ${this.hp}\nStrength: ${this.str}`);
     }
 }
