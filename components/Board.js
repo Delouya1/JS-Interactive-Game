@@ -165,6 +165,7 @@ class Board {
             //if there is an item, use it
             for (let i = 0; i < this.items.length; i++) {
                 if (this.items[i].x === this.player.x && this.items[i].y === this.player.y) {
+                    console.log("You found a " + this.items[i].name + "!");
                     this.player.usePotion(this.items[i]);
 
                     //remove the item from the board and the array

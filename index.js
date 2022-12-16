@@ -12,6 +12,15 @@ board.addMonster();
 board.addMonster();
 board.addMonster();
 board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+board.addMonster();
+
 
 
 //add items

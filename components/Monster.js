@@ -2,11 +2,10 @@ class Monster {
     constructor(x, y) {
         this.name = "Monster";
         this.hp = 20;
-        this.str = 5;
+        this.str = 12;
         this.x = x;
         this.y = y;
-
-
+        
     }
 
     getHealth() {

@@ -11,8 +11,6 @@ class Player {
 
 
     getHealth() {
-        console.log(`${this.name}'s health is now ${this.hp}!`)
-
         return `${this.name}'s health is now ${this.hp}!`;
     }
 
@@ -36,14 +34,16 @@ class Player {
     battle(monster) {
         //battle until one of them is dead
         while (this.hp > 0 && monster.hp > 0) {
-
             this.attack(monster);
             monster.attack(this);
+            //print the health of both
+            console.log(this.getHealth());
+            console.log(monster.getHealth());
+
         }
 
         //print player and monster stats
         this.printStats();
-        monster.printStats();
         //if player is dead
         if (this.hp === 0) {
             console.log("You lost!");
@@ -56,10 +56,8 @@ class Player {
     usePotion(name) {
         if (name === "hp") {
             this.hp += 10;
-            console.log(`${this.name}'s health is now ${this.hp}!`);
         } else if (name === "str") {
             this.str += 5;
-            console.log(`${this.name}'s strength is now ${this.str}!`);
         }
 
     }
