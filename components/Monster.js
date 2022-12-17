@@ -5,7 +5,7 @@ class Monster {
         this.str = 12;
         this.x = x;
         this.y = y;
-        
+
     }
 
     getHealth() {
@@ -26,10 +26,6 @@ class Monster {
     attack(opponent) {
         console.log(`${this.name} attacked ${opponent.name}!`);
         opponent.reduceHealth(this.str);
-    }
-
-    getCoordinates() {
-        return [this.x, this.y];
     }
 
     printStats() {

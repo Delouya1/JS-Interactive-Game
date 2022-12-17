@@ -14,10 +14,6 @@ class Player {
         return `${this.name}'s health is now ${this.hp}!`;
     }
 
-    isAlive() {
-        return this.hp !== 0;
-    }
-
     reduceHealth(hp) {
         this.hp -= hp;
         if (this.hp < 0) {
@@ -51,21 +47,6 @@ class Player {
             console.log("You won the battle!");
         }
     }
-
-
-    usePotion(name) {
-        if (name === "hp") {
-            this.hp += 10;
-        } else if (name === "str") {
-            this.str += 5;
-        }
-
-    }
-
-    getCoordinates() {
-        return [this.x, this.y];
-    }
-
 
     printStats() {
         console.log(`Name: ${this.name}\nHealth: ${this.hp}\nStrength: ${this.str}`);

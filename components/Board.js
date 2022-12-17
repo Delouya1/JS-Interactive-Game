@@ -165,8 +165,16 @@ class Board {
             //if there is an item, use it
             for (let i = 0; i < this.items.length; i++) {
                 if (this.items[i].x === this.player.x && this.items[i].y === this.player.y) {
-                    console.log("You found a " + this.items[i].name + "!");
-                    this.player.usePotion(this.items[i]);
+                    //use potion
+                    if (this.items[i].name === "hp") {
+                        this.player.hp += 10;
+                        console.log("You gained 10 hp!");
+                    }
+                    //use str
+                    if (this.items[i].name === "str") {
+                        this.player.str += 5;
+                        console.log("You gained 5 str!");
+                    }
 
                     //remove the item from the board and the array
                     this.board[this.items[i].x][this.items[i].y] = null;
