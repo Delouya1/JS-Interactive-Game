@@ -2,7 +2,7 @@
 
 JavaScriptGame
 
-You will need to create a fun interactive game using JS.
+fun interactive game using JS OOP and played from the console.
 
 ![image](https://user-images.githubusercontent.com/34707669/206923131-88bd771d-e231-4de9-bbc4-fedc88f70cdf.png)
 
@@ -30,21 +30,4 @@ The game will contain:
 
 ------
 
-You must implement:
--
 
-1. 25*25 matrix representing the board.
-2. save, show, and update the game status after every move (player hp, if he is in battle, attack points).
-3. When the player will enter a battle you will need to print all the attacks between the player and the monster +
-   combat lost/won.
-4. Slots containing monsters/items will be marked with ? or any other thing you like (the point is that the player will
-   not know if he is about to enter combat or get an item).
-
----
-
-Bonus
--
-
-Add some UI for the game and not just a console game.
-
-![image](https://user-images.githubusercontent.com/34707669/206924758-7d5fb794-c80d-4f50-9e77-8f0f1418dc0b.png)
